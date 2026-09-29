@@ -12,7 +12,7 @@ window.onload = function () {
   }
 
   /*JS로 한 글자씩 출력하는 방식*/
-  const text = "1년동안 구두약속 - 드디어 간다✨✨";
+  const text = "1년동안의 릴스여행 - 드디어 간다✨✨";
   const chars = Array.from(text);
   const el = document.getElementById("typing");
   let i = 0;
