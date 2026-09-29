@@ -49,9 +49,27 @@ header div {
   font-family: "BatangChe", Courier, monospace;
   color: #8b735d;
 }
+#typing {
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
 header div img {
   padding-top: 20px;
   margin: 0 auto;
+}
+
+/*---------------커서 깜빡이 css---------------*/
+#typing::after {
+  content: "I";
+  margin-left: 2px;
+  animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 /*---------------button 파트---------------*/
@@ -218,4 +236,25 @@ footer {
   outline: 1px solid #e7d8c2;
   border-radius: 28px;
   box-shadow: 0px 12px 18px rgba(0, 0, 0, 0.07);
+}
+/*---------------흔들거림 애니메이션 css---------------*/
+.coating {
+  margin-top: 8px;
+  animation-name: coating;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes coating {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
 }
